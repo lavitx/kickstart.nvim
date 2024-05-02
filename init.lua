@@ -568,10 +568,12 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         gopls = {},
+        pylsp = {},
         -- -- -- pyright = {},
         rust_analyzer = {},
         powershell_es = {
-          bundle_path = 'C:PowerShellEditorServices',
+          bundle_path = 'C:\\PowerShellEditorServices',
+          shell = 'powershell.exe',
         },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -807,7 +809,7 @@ require('lazy').setup({
       --  - va)  - [V]isually select [A]round [)]paren
       --  - yinq - [Y]ank [I]nside [N]ext [']quote
       --  - ci'  - [C]hange [I]nside [']quote
-      -- require('mini.ai').setup { n_lines = 500 }
+      require('mini.ai').setup { n_lines = 500 }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
